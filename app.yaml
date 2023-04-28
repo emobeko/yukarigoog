@@ -1,5 +1,6 @@
 runtime: python38
-
+vm: true-
+entrypoint: gunicorn -b :$PORT main:app
 handlers:
   - url: /.*
     script: auto
